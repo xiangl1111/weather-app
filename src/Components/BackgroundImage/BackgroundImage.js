@@ -3,8 +3,9 @@ const BackgroundImage =({
     children,
 }) => (
     <div 
-    style={{BackgroundImage: `url(${image})`}}
-    className = "bg-cover bg-center">
+    style={{ backgroundImage: `url(${image})`}}
+    className = "bg-cover bg-center"
+    >
         {children}
     </div>
 )

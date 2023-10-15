@@ -1,12 +1,17 @@
-import Name from "../../../../../Name";
 import WeatherIcon from "../../../../../WeatherIcon";
 import Temperature from "../../../../../Temperature";
 
-const DayOfWeek =() =>(
-    <div>
-        <Name />
-        <WeatherIcon />
-        <Temperature />
+const DayOfWeek =({
+    name,
+    weather,
+    temperature,
+}) =>(
+    <div className="text-center">
+        <div>{name}</div>
+        <div className="my-4">
+        <WeatherIcon code={weather.code} name={weather.name}/>
+        </div>
+        <Temperature className="text-xl" value={temperature}/>
     </div>
 )
 

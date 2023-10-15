@@ -1,6 +1,6 @@
 import BackgroundImage from './Components/BackgroundImage';
 import WeatherCard from './Components/WeatherCard';
-import bg from './assets/app-bg.webp'
+import bg from './assets/app-bg.png'
 
 const App = () => (
   <BackgroundImage image={bg}>
