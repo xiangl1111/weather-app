@@ -7,7 +7,9 @@ const Forecast = ({
     loading,
 }) =>(
         <SubSection title='Forecast'>
-        {loading && <div>Loading</div>}
+        {loading ? (
+        <div>Loading</div>
+        ): (
         <div className ="flex gap-4 justify-between">
         {forecast?.map(({ name, weather, temperature }) => (
            <DayOfWeek
@@ -18,6 +20,7 @@ const Forecast = ({
            />
         ))}
         </div>
+        )}
     </SubSection>
     ) 
 

@@ -6,6 +6,7 @@ import BackgroundImage from "../../../BackgroundImage"
 import bg from "./assets/bg-current-city.jpg"
 
 const CurrentCity = ({
+    name,
     current,
     loading
 }) => (<BackgroundImage image={bg}>
@@ -23,7 +24,7 @@ const CurrentCity = ({
                 wind={current?.wind_speed}
                 loading={loading}/>
             </div>
-            <Name> Melbourne </Name>
+            <Name> {name} </Name>
             <div className="h-[25px] bg-black/60 absolute bottom-0 inset-x-0"></div>
         </div>
     </BackgroundImage>

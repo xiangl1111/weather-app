@@ -5,11 +5,14 @@ const MELBOURNE_GEO ={
     lon: 144.9631608,
 }
 
-const oneCall =() => OpenWeatherMapAPI
+const oneCall =({
+    lat,
+    lon,
+}) => OpenWeatherMapAPI
     .get("/onecall",{
         params:{
-            lat: MELBOURNE_GEO.lat,
-            lon: MELBOURNE_GEO.lon,
+            lat,
+            lon,
         }
     })
     .then((response)=> response.data)

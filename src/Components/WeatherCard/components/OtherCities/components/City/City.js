@@ -6,14 +6,18 @@ const City =({
     name,
     temperature,
     weather,
+    onClick,
 }) => (
-    <div className ="flex items-center">
+    <button className ="flex items-center text-left 
+    border-b-[2px] border-transparent
+    hover:border-b-black/5 " 
+    onClick={onClick}>
         <Name>{name}</Name>
         <div className="w-[50px]">
         <Temperature className="text-xl" temperature={temperature}/>
         </div>
         <WeatherIcon code={weather.code} weather={weather.name} />
-    </div>
+    </button>
 )
 
 export default City;

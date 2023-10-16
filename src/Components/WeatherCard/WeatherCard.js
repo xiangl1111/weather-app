@@ -17,12 +17,18 @@ import oneCall from '../../apis/oneCall';
 const WEEK_DAYS = ['SUN','MON','TUE','WED','THU','FRI','SAT']
 
 const WeatherCard = () => {
+  const [city,setCity] = useState({name:'Sydney', lat: -33.8698439, lon: 151.2082848 });
   const [current,setCurrent] = useState();
   const [forecast,setForecast] = useState()
   const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        oneCall()
+      setLoading(true)
+
+        oneCall({
+          lat: city.lat,
+          lon: city.lon,
+        })
         .then((data) =>{
           setCurrent(data.current)
 
@@ -39,13 +45,13 @@ const WeatherCard = () => {
         .finally(()=>{
             setLoading(false)
         })
-    },[])
+    },[city])
 
     return (
       <div className="bg-white rounded-3xl shadow-2xl shadow-black/50 overflow-hidden">
-      <CurrentCity current={current} loading={loading}/>
+      <CurrentCity name= {city.name} current={current} loading={loading}/>
       <div className="flex gap-12 px-12 py-9 ">
-        <OtherCities />
+        <OtherCities onCityClick={setCity}/>
         <div className = "w-[4px] bg-black/10"></div>
         <div className ="flex-1">
           <Forecast forecast={forecast} loading={loading}/>
