@@ -24,7 +24,7 @@ const CurrentCity = ({
                 wind={current?.wind_speed}
                 loading={loading}/>
             </div>
-            <Name> {name} </Name>
+            <div className="min-w-[200px]"><Name> {name} </Name></div>
             <div className="h-[25px] bg-black/60 absolute bottom-0 inset-x-0"></div>
         </div>
     </BackgroundImage>
