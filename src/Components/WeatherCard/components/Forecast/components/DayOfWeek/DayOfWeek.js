@@ -11,7 +11,7 @@ const DayOfWeek =({
         <div className="my-4">
         <WeatherIcon code={weather.code} name={weather.name}/>
         </div>
-        <Temperature className="text-xl" value={temperature}/>
+        <Temperature className="text-xl" temperature={temperature}/>
     </div>
 )
 

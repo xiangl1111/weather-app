@@ -9,7 +9,9 @@ const City =({
 }) => (
     <div className ="flex items-center">
         <Name>{name}</Name>
-        <Temperature className="text-xl" value={temperature}/>
+        <div className="w-[50px]">
+        <Temperature className="text-xl" temperature={temperature}/>
+        </div>
         <WeatherIcon code={weather.code} weather={weather.name} />
     </div>
 )

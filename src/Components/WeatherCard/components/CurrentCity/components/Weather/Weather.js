@@ -1,5 +1,3 @@
-import oneCall from "../../../../../apis/oneCall";
-
 const Weather = ({
     weather,
     loading,

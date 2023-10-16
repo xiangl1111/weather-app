@@ -1,10 +1,11 @@
 const Item =({
     title,
     children,
+    loading,
 }) => (
-    <div className="text-white/70 text-center">
+    <div className="text-white/70 text-center min-w-[90px]">
     <div className= "mb-3">{title}</div>
-    <div>{children}</div>
+    <div>{loading? '...':children}</div>
 </div>
 )
 

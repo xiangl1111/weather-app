@@ -1,10 +1,10 @@
 const Temperature =({
-    value,
+    temperature,
     className,
     loading,
 }) => (
     <div className= {className}>
-        {loading ? '...': `${value} °`}
+        {loading ? '...': `${temperature} °`}
     </div>
 )
 
