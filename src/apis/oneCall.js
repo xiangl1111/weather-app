@@ -12,6 +12,6 @@ const oneCall =() => OpenWeatherMapAPI
             lon: MELBOURNE_GEO.lon,
         }
     })
-    .then((response)=> response.json())
+    .then((response)=> response.data)
       
 export default oneCall;

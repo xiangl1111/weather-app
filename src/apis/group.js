@@ -13,7 +13,7 @@ const group = () => OpenWeatherMapAPI
       id: CITIES.map((city) => city.id).join(","),
     }
   })
-  .then((response) => response.json())
+  .then((response) => response.data)
 
 
 export default group;
